@@ -2,6 +2,7 @@ package co.edu.udistrital.model;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 public class AlgoritmosOrdenamiento {
 
@@ -62,16 +63,20 @@ public class AlgoritmosOrdenamiento {
     }
  
     private int particionar(List<Integer> lista, int izquierda, int derecha) {
+        // Pivote aleatorio para evitar el peor caso con listas ya ordenadas
+        int pivoteIdx = izquierda + new Random().nextInt(derecha - izquierda + 1);
+        Collections.swap(lista, pivoteIdx, derecha);
+        
         int pivote = lista.get(derecha);
         int i = izquierda - 1;
- 
+
         for (int j = izquierda; j < derecha; j++) {
             if (lista.get(j) > pivote) {
                 i++;
                 Collections.swap(lista, i, j);
             }
         }
- 
+
         Collections.swap(lista, i + 1, derecha);
         return i + 1;
     }

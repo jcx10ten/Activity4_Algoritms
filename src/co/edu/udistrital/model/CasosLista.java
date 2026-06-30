@@ -7,7 +7,7 @@ public class CasosLista {
 	
 	public List<Integer> inversoCaso(List<Integer> test , int n){	
 		test.clear();
-		for(int i=0; i==n;i++) {
+		for(int i=0; i<n;i++) {
 			test.add(n-i);
 		}
 		return test;
@@ -15,7 +15,7 @@ public class CasosLista {
 	
 	public List<Integer> promedioCaso(List<Integer> test , int n){
 		test.clear();
-		for(int i=0; i==n;i++) {
+		for(int i=0; i<n;i++) {
 			test.add(i);
 		}
 		Collections.shuffle(test);
@@ -25,7 +25,7 @@ public class CasosLista {
 	
 	public List<Integer> ordenadoCaso(List<Integer> test , int n){
 		test.clear();
-		for(int i=0; i==n;i++) {
+		for(int i=0; i<n;i++) {
 			test.add(i);
 		}
 		return test;
