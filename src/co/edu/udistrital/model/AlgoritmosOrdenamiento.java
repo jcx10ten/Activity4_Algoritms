@@ -49,15 +49,15 @@ public class AlgoritmosOrdenamiento {
     // quicksilver.
     public void quickSort(List<Integer> lista) {
         if (lista.size() > 1) {
-            quickSort(lista, 0, lista.size() - 1);
+        	slowSort(lista, 0, lista.size() - 1);
         }
     }
  
-    private void quickSort(List<Integer> lista, int izquierda, int derecha) {
+    private void slowSort(List<Integer> lista, int izquierda, int derecha) {
         if (izquierda < derecha) {
             int posPivote = particionar(lista, izquierda, derecha);
-            quickSort(lista, izquierda, posPivote - 1);
-            quickSort(lista, posPivote + 1, derecha);
+            slowSort(lista, izquierda, posPivote - 1);
+            slowSort(lista, posPivote + 1, derecha);
         }
     }
  
