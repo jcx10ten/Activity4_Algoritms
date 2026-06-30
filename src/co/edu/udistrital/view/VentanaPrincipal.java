@@ -17,11 +17,11 @@ public class VentanaPrincipal {
         return leerEntero();
     }
  
-    public void mostrarResultados(String algoritmo, int tamano,
-                                   double tiempoMejor, double tiempoPeor, double tiempoPromedio) {
-        System.out.printf("%-10s %-10d %-10.3f Mejor%n", algoritmo, tamano, tiempoMejor);
-        System.out.printf("%-10s %-10d %-10.3f Peor%n", algoritmo, tamano, tiempoPeor);
-        System.out.printf("%-10s %-10d %-10.3f Promedio%n", algoritmo, tamano, tiempoPromedio);
+    public void mostrarResultados(String algoritmo, int n,
+                                   long tiempoMejor, long tiempoPeor, long tiempoPromedio) {
+        System.out.printf("\n Algoritmo: "+ algoritmo+ ", n: " + n + ", T. Mejor caso: "+ tiempoMejor);
+        System.out.printf("\n Algoritmo: "+ algoritmo+ ", n: " + n + ", T. Peor caso: "+ tiempoPeor);
+        System.out.printf("\n Algoritmo: "+ algoritmo+ ", n: " + n + ", T. Caso promedio: "+ tiempoPromedio);
     }
  
     private int leerEntero() {
@@ -36,4 +36,6 @@ public class VentanaPrincipal {
  
     public void cerrar() {
         scanner.close();
+    }
+
     }
