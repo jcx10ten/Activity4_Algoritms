@@ -7,7 +7,7 @@ public class VentanaPrincipal {
     private final Scanner scanner = new Scanner(System.in);
     
     public int pedirTamano() {
-        System.out.print("Tamano del arreglo (N): ");
+        System.out.print("\nTamano del arreglo (N): ");
         return leerEntero();
     }
  
@@ -26,7 +26,7 @@ public class VentanaPrincipal {
  
     private int leerEntero() {
         while (!scanner.hasNextInt()) {
-            System.out.print("Numero invalido, intente de nuevo: ");
+            System.out.print("\nNumero invalido, intente de nuevo: ");
             scanner.next();
         }
         int valor = scanner.nextInt();

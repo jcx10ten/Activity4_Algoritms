@@ -23,10 +23,11 @@ public class Controller {
 
 	public void Run() {
 		lista = new ArrayList<>();
-		int n = ventana.pedirTamano();
-		int opc = ventana.pedirAlgoritmo();
-		do{
 
+		int opc ;
+		do{
+			int n = ventana.pedirTamano();
+			opc = ventana.pedirAlgoritmo();
 			switch (opc) {
 			case 1:
 				tiempoBurbuja(lista,n);
@@ -48,7 +49,8 @@ public class Controller {
 				break;
 
 			}
-		}while(opc!=5);
+			
+		}while(opc!=0);
 		
 
 	}
