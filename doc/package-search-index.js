@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"Activity_Algoritms","l":"co.edu.udistrital.controller"},{"m":"Activity_Algoritms","l":"co.edu.udistrital.model"},{"m":"Activity_Algoritms","l":"co.edu.udistrital.view"}];updateSearchResults();
