@@ -7,6 +7,12 @@ import co.edu.udistrital.model.AlgoritmosOrdenamiento;
 import co.edu.udistrital.model.CasosLista;
 import co.edu.udistrital.view.VentanaPrincipal;
 
+/**
+ * Controlador principal de la aplicación. Coordina la interacción entre
+ * la vista , la generación de casos de prueba y los algoritmos de ordenamiento
+ * midiendo y mostrando los tiempos de ejecución de cada algoritmo bajo distintos escenarios.
+ */
+
 public class Controller {
 
 	private AlgoritmosOrdenamiento algoritmo;
@@ -21,6 +27,13 @@ public class Controller {
 		Run();
 	}
 
+	/**
+	 * Ejecuta el ciclo principal de la aplicación: solicita al usuario
+	 * el tamaño del arreglo y el algoritmo a probar, y delega la ejecución
+	 * al método correspondiente según la opción elegida. El ciclo se repite
+	 * hasta que el usuario ingrese la opción de salida (0).
+	 */
+	
 	public void Run() {
 		lista = new ArrayList<>();
 
@@ -54,7 +67,16 @@ public class Controller {
 		
 
 	}
-
+	
+	/**
+	 * Mide y muestra los tiempos de ejecución del algoritmo de Burbuja
+	 * en sus tres escenarios: peor caso (arreglo invertido), mejor caso
+	 * (arreglo ordenado) y caso promedio (arreglo desordenado aleatoriamente).
+	 *
+	 * @param lista lista base sobre la que se generan los distintos casos de prueba
+	 * @param n     tamaño del arreglo a generar y ordenar
+	 */
+	
 	public void tiempoBurbuja(List<Integer> lista, int n) {
 
 		// Peor caso
@@ -82,6 +104,15 @@ public class Controller {
 		ventana.mostrarResultados("Burbuja", n, tiempoMejor, tiempoPeor, tiempoProm);
 
 	}
+	
+	/**
+	 * Mide y muestra los tiempos de ejecución del algoritmo de Shell
+	 * en sus tres escenarios: peor caso (arreglo invertido), mejor caso
+	 * (arreglo ordenado) y caso promedio (arreglo desordenado aleatoriamente).
+	 *
+	 * @param lista lista base sobre la que se generan los distintos casos de prueba
+	 * @param n     tamaño del arreglo a generar y ordenar
+	 */
 
 	public void tiempoShell(List<Integer> lista, int n) {
 
@@ -111,6 +142,15 @@ public class Controller {
 
 	}
 
+	/**
+	 * Mide y muestra los tiempos de ejecución del algoritmo QuickSort
+	 * en sus tres escenarios: peor caso (arreglo invertido), mejor caso
+	 * (arreglo ordenado) y caso promedio (arreglo desordenado aleatoriamente).
+	 *
+	 * @param lista lista base sobre la que se generan los distintos casos de prueba
+	 * @param n     tamaño del arreglo a generar y ordenar
+	 */
+	
 	public void tiempoQuickSort(List<Integer> lista, int n) {
 
 		// Peor caso
@@ -138,6 +178,15 @@ public class Controller {
 		ventana.mostrarResultados("QuickSort", n, tiempoMejor, tiempoPeor, tiempoProm);
 
 	}
+	
+	/**
+	 * Mide y muestra los tiempos de ejecución del algoritmo Radix Sort
+	 * en sus tres escenarios: peor caso (arreglo invertido), mejor caso
+	 * (arreglo ordenado) y caso promedio (arreglo desordenado aleatoriamente).
+	 *
+	 * @param lista lista base sobre la que se generan los distintos casos de prueba
+	 * @param n     tamaño del arreglo a generar y ordenar
+	 */
 
 	public void tiempoRadix(List<Integer> lista, int n) {
 
